@@ -113,18 +113,14 @@ function initDateTime() {
 
 /**
  * Visitor Counter
- * Simulates a visitor counter with localStorage persistence
+ * Simulates a visitor counter 
  */
-// REPLACE IT WITH THIS NEW CODE
-/**
- * Real Visitor Counter
- * This function calls our serverless API to get the real, total visitor count.
- */
+
 function initVisitorCounter() {
   const counterElement = document.getElementById("visitorCount");
   if (!counterElement) return;
 
-  // This function will animate the number counting up
+  //  animate the number counting up
   function animateValue(element, start, end, duration) {
     let startTimestamp = null;
     const step = (timestamp) => {
@@ -138,7 +134,7 @@ function initVisitorCounter() {
     window.requestAnimationFrame(step);
   }
 
-  // Use fetch to call our new API endpoint
+  
   fetch('/api/counter')
     .then(response => response.json())
     .then(data => {
@@ -155,7 +151,7 @@ function initVisitorCounter() {
     });
 }
 
-// Make sure to call the function when the page loads
+
 document.addEventListener('DOMContentLoaded', initVisitorCounter);
 
 //real Weather API Data
@@ -312,55 +308,55 @@ document.addEventListener("DOMContentLoaded", function () {
   // Gallery Data - REPLACE WITH YOUR IMAGE PATHS
   const galleryData = [
     {
-      src: "images/baril front view.jpg",
+      src: "./images/baril_front_view.jpg",
       category: "landscape",
       caption: "View of Baril from the neighboring village of Chhepatta",
       caption_ne: "छिमेकी गाउँ छेपट्टा बाट बारिल को दृश्य",
     },
     {
-      src: "images/baril icefall.jpg",
+      src: "./images/baril_icefall.jpg",
       category: "landscape",
       caption: "Snow view from Baril",
       caption_ne: "बारिल बाट हिऊ को दृश्य",
     },
     {
-      src: "images/malla gaau.jpg",
+      src: "./images/malla_gaau.jpg",
       category: "landscape",
       caption: "Malla Gau view",
       caption_ne: "मल्ला गाउँको दृश्य",
     },
     {
-      src: "images/chantoli school.jpg",
+      src: "./images/chantoli_school.jpg",
       category: "landscape",
       caption: "Latinath Basic School Chantoli",
       caption_ne: "लटिनाथ आधारभूत विद्यालय चन्तोलि",
     },
     {
-      src: "images/balanch school.jpg",
+      src: "./images/balanch_school.jpg",
       category: "landscape",
       caption: "Balanch School",
       caption_ne: "बलाँच  मा.वि.",
     },
     {
-      src: "images/gaura.jpg",
+      src: "./images/gaura.jpg",
       category: "culture",
       caption: "Gaura Parva Baril",
       caption_ne: "गौरा पर्व बारिल",
     },
     {
-      src: "images/jaat2.jpg",
+      src: "./images/jaat2.jpg",
       category: "culture",
       caption: "The festival is held in Kartik",
       caption_ne: "पारम्परिक चाड (जात्रा) कार्तिक मा",
     },
     {
-      src: "images/baril school students.jpg",
+      src: "./images/baril_school_students.jpg",
       category: "people",
       caption: "Students from baril school",
       caption_ne: "बारिल स्कूलका विद्यार्थीहरू",
     },
     {
-      src: "images/basinda.jpg",
+      src: "./images/basinda.jpg",
       category: "people",
       caption: "Fun Gathering",
       caption_ne: "रमाइलो भेला",
@@ -1056,3 +1052,4 @@ function initBackToTop() {
     });
   });
 }
+
